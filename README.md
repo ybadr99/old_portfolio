@@ -120,9 +120,8 @@ Project not yet to be deployed
 > MILINDI SHEMA David
 > 👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/MILINDI7)
-- Twitter: [@twitterhandle](https://twitter.com/DavidShema14)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/david-milindi-shema-803954231/)
+- GitHub: [@githubhandle](https://github.com/ybadr99)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/yousef-mohamed-badr/)
 
 <!-- FUTURE FEATURES -->
 
@@ -138,7 +137,7 @@ Project not yet to be deployed
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/MILINDI7/Hello-word/issues).
+Feel free to check the [issues page](https://github.com/ybadr99/portfolio/issues).
 
 <!-- SUPPORT -->
 
