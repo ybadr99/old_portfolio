@@ -228,6 +228,10 @@ nav {
   text-align: center;
 }
 
+.tools ul li {
+  margin-bottom: 15px;
+}
+
 #project2 li {
   color: #fff;
 }
@@ -306,10 +310,6 @@ nav {
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 30px;
-}
-
-.tools ul li {
-  margin-bottom: 15px;
 }
 
 #contact-me {
