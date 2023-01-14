@@ -6,12 +6,17 @@
   padding: 0;
 }
 
+ul,
+li {
+  list-style: none;
+}
+
 header {
   width: 375px;
 }
 
 nav {
-  background: #3c3a39;
+  background-color: #3c3a39;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,7 +39,7 @@ nav {
   align-items: flex-start;
   height: 590px;
   padding: 120px 24px;
-  background: #1c1a19;
+  background-color: #1c1a19;
   color: #fff;
 }
 
@@ -121,6 +126,7 @@ nav {
   font-size: 32px;
   line-height: 44px;
 }
+
 #project1 p {
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -130,21 +136,24 @@ nav {
   color: #091e42;
   margin-bottom: 18px;
 }
-#skills {
+
+.skills {
   display: flex;
   gap: 12px;
 }
-#skills li {
+
+.skills li {
   color: #091e42;
   border: 1px solid #8993a4;
   padding: 10px 12px;
   margin-bottom: 14px;
   list-style: none;
 }
+
 #project1 button {
   width: 124px;
   height: 48px;
-  background: #ff6b00;
+  background-color: #ff6b00;
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -166,6 +175,7 @@ nav {
   height: 386px;
   color: #fff;
 }
+
 #project2 h1 {
   font-family: "Crete Round", serif;
   font-style: normal;
@@ -173,8 +183,9 @@ nav {
   font-size: 32px;
   line-height: 44px;
   margin-top: 80px;
-  padding: 0px 24px;
+  padding: 0 24px;
 }
+
 #project2 p {
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -184,10 +195,11 @@ nav {
   padding: 0 24px;
   margin-bottom: 20px;
 }
+
 #project2 button {
   width: 327px;
   height: 48px;
-  background: #ff6b00;
+  background-color: #ff6b00;
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -199,9 +211,11 @@ nav {
   color: #fff;
   border: none;
 }
-#project2 #skills {
-  padding: 0px 24px;
+
+#project2 .skills {
+  padding: 0 24px;
 }
+
 #project2 li {
   color: #fff;
 }
@@ -238,7 +252,7 @@ nav {
   width: 161px;
   height: 48px;
   text-align: center;
-  background: #ff6b00;
+  background-color: #ff6b00;
   color: #f4f5f7;
   border: none;
   margin-left: 30px;
@@ -255,6 +269,7 @@ nav {
 }
 
 #details {
+  width: 327px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -262,22 +277,19 @@ nav {
   margin-bottom: 100px;
 }
 
-#details .skill {
+#details .tools {
   display: flex;
   flex-direction: column;
   align-items: center;
-  align-content: center;
-  padding: 0px;
-  gap: 24px;
+  padding: 20px;
+  /* gap: 24px; */
   font-size: 32px;
 }
 
-.skill li {
-  list-style: none;
+.tools li {
   padding: 12px;
   font-size: 22px;
   text-align: center;
-  padding: 20px;
 }
 
 #contact-me {
@@ -330,7 +342,7 @@ nav {
 #contact-me button {
   width: 131px;
   height: 48px;
-  background: #ff6b00;
+  background-color: #ff6b00;
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -353,4 +365,10 @@ nav {
 
 #contact-me ul {
   padding: 30px;
+}
+
+button:hover,
+button:active {
+  background-color: #d45800;
+  cursor: pointer;
 }
