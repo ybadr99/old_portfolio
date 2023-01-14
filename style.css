@@ -11,10 +11,20 @@ li {
   list-style: none;
 }
 
-button:hover,
-button:active {
-  background-color: #d45800;
-  cursor: pointer;
+/* I used !important here because I faced problem doesn't work even 2 way 1-give all buttuns same #id or !important  */
+button:hover {
+  background-color: #fff5e1 !important;
+  color: #f55800 !important;
+  border: 1px solid #f55800 !important;
+}
+
+button:disabled {
+  background-color: #f4f1f0 !important;
+  color: #5b5957 !important;
+}
+button:focus {
+  background-color: #e05304 !important;
+  color: #fff !important;
 }
 
 nav {
@@ -109,7 +119,7 @@ nav {
   height: 83px;
   font-family: "Inter", serif;
   font-weight: 400;
-  font-size: 36px;
+  font-size: 24px;
   text-align: center;
 }
 
@@ -182,7 +192,7 @@ nav {
   color: #fff;
 }
 
-#project2 h1 {
+#project2 h3 {
   font-family: "Crete Round", serif;
   font-style: normal;
   font-weight: 400;
@@ -239,8 +249,14 @@ nav {
 #about-me {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #1c1a19;
   color: #f4f5f7;
+}
+
+#about-header {
+  width: 327px;
   position: relative;
 }
 
@@ -248,7 +264,7 @@ nav {
   text-align: center;
   font-family: "Crete Round", sans-serif;
   font-weight: 400;
-  font-size: 68px;
+  font-size: 60px;
   letter-spacing: 0.37px;
   color: #ff6b00;
   margin-top: 120px;
@@ -256,7 +272,7 @@ nav {
 
 #about-me p {
   font-family: "Inter", sans-serif;
-  font-size: 18px;
+  font-size: 14px;
   color: #f4f5f7;
   line-height: 24px;
   text-align: left;
@@ -277,8 +293,8 @@ nav {
 
 #about-me #illustrationSec {
   position: absolute;
-  left: 57.11%;
-  top: 23.79%;
+  left: 58.11%;
+  top: 64.79%;
 }
 
 #about-me hr {
@@ -304,12 +320,31 @@ nav {
   align-items: center;
   text-align: center;
   padding: 20px;
+  position: relative;
 }
 
-.tools header {
+.tools h4 {
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 30px;
+}
+
+.heading1::before {
+  content: url("./images/Rectangle\ 55.png");
+  position: absolute;
+  left: -10px;
+}
+
+.heading2::before {
+  content: url("./images/Rectangle\ 56.png");
+  position: absolute;
+  left: -10px;
+}
+
+.heading3::before {
+  content: url("./images/Rectangle\ 57.png");
+  position: absolute;
+  left: 10px;
 }
 
 #contact-me {
