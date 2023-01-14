@@ -22,6 +22,7 @@ button:disabled {
   background-color: #f4f1f0 !important;
   color: #5b5957 !important;
 }
+
 button:focus {
   background-color: #e05304 !important;
   color: #fff !important;
