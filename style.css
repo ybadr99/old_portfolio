@@ -217,11 +217,13 @@ nav {
 #project2 .skills {
   padding: 0 24px;
 }
+
 .tools li {
   padding: 12px;
   font-size: 22px;
   text-align: center;
 }
+
 #project2 li {
   color: #fff;
 }
