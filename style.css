@@ -356,11 +356,11 @@ nav {
   align-items: center;
   padding: 20px;
   margin-top: 50px;
+  font-family: "Inter", sans-serif;
 }
 
 #contact-me h3 {
   height: 216px;
-  font-family: "Inter", sans-serif;
   font-size: 30px;
   line-height: 44px;
   text-align: center;
@@ -399,7 +399,6 @@ nav {
   width: 131px;
   height: 48px;
   background-color: #ff6b00;
-  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 17px;
