@@ -380,6 +380,7 @@ nav {
   height: 48px;
   border: none;
   border-bottom: 1px solid #dbd8d7;
+  font-family: "Inter", sans-serif;
   font-size: 22px;
   margin-bottom: 20px;
   padding: 20px;
@@ -388,6 +389,7 @@ nav {
 #contact-me textarea {
   width: 327px;
   border: none;
+  font-family: "Inter", sans-serif;
   font-size: 22px;
   background-color: #fbf8f7;
   color: #3c3a39;
