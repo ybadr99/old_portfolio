@@ -28,12 +28,26 @@ button:focus {
   color: #fff !important;
 }
 
+header {
+  width: 100%;
+  height: auto;
+}
+
 nav {
   background-color: #3c3a39;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+nav #nav-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #logo {
@@ -46,10 +60,44 @@ nav {
   text-decoration: none;
 }
 
-#header {
+nav #menu-icon {
+  background-image: url(./images/Icon\ -\ Menu.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 24px;
+  height: 24px;
+}
+
+#nav-el {
+  color: #fff;
+  margin-right: 50px;
+  display: none;
+}
+
+#nav-el #message {
+  background-image: url("./images/Icon\ -\ Mail.png");
+  width: 24px;
+  height: 24px;
+}
+
+@media (min-width: 768px) {
+  #nav-el {
+    /* /_ display: block; _/ */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 26px;
+  }
+
+  #menu-icon {
+    display: none;
+  }
+}
+
+#header-body {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  justify-content: flex-start;
   height: 590px;
   padding: 120px 24px;
   background-color: #1c1a19;
@@ -57,7 +105,11 @@ nav {
   position: relative;
 }
 
-#header h1 {
+#intro {
+  width: 100%;
+}
+
+#header-body h1 {
   font-family: "Crete Round", serif;
   font-style: normal;
   font-weight: 400;
@@ -67,7 +119,7 @@ nav {
   margin-bottom: 10px;
 }
 
-#header h5 {
+#header-body h5 {
   font-size: 24px;
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -75,7 +127,7 @@ nav {
   margin-bottom: 10px;
 }
 
-#header p {
+#header-body p {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -84,54 +136,94 @@ nav {
   margin-bottom: 10px;
 }
 
-#header ul {
-  list-style: none;
-}
-
-.social-icons {
+.social-icons-header {
   display: flex;
   gap: 15px;
   padding: 12px;
 }
 
-.social-icons li {
-  list-style: none;
+/* #illustrationWrap {
+  position: absolute;
+  right: 0;
+  top: 53%;
+} */
+#illustrationWrap:first-child {
+  /* display: none; */
+  background-color: #172b4d;
 }
 
-#illustration {
-  position: absolute;
-  left: 65%;
-  top: 53%;
+#illustrationWrap:last-child {
+  display: none;
 }
+
+@media (min-width: 768px) {
+  #header-body {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  #intro {
+    width: 40%;
+  }
+
+  #header-body h1 {
+    font-size: 62px;
+  }
+
+  #illustrationWrap:first-child {
+    display: none;
+  }
+
+  #illustrationWrap:last-child {
+    display: block;
+  }
+
+  .social-icons-header {
+    width: 50px;
+    flex-direction: column;
+    order: -1;
+  }
+}
+
+/* ////////////////////////////////////////////////// */
 
 #myworks {
-  display: grid;
-  grid-template-columns: 24px auto 24px;
-  grid-template-rows: 100px repeat(5, auto);
-  row-gap: 20px;
-  width: 375px;
+  width: 100%;
+  height: auto;
   margin: 100px 0;
 }
 
-#myworks #title {
-  grid-column: 2/3;
-  grid-row: 1/2;
-  width: 327px;
+#title {
+  width: 100%;
   height: 83px;
   font-family: "Inter", serif;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 22px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #title hr {
-  margin-top: 20px;
+  width: 80%;
+  margin: 20px auto;
+}
+
+#projects {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(5, auto);
+  row-gap: 20px;
+  width: 327px;
+  margin-left: 22px;
 }
 
 #project1 {
-  grid-column: 2/3;
-  grid-row: 2/3;
+  grid-column: 1/2;
+  grid-row: 1/2;
   height: 568px;
+  width: 100%;
 }
 
 #project1 h3 {
@@ -183,17 +275,17 @@ nav {
   border: none;
 }
 
-#project2 {
-  grid-column: 2/3;
+.project {
+  grid-column: 1/2;
   background-image: url("./images/Img\ Placeholder2.png");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 327px;
+  width: 100%;
   height: 386px;
   color: #fff;
 }
 
-#project2 h3 {
+.project h3 {
   font-family: "Crete Round", serif;
   font-style: normal;
   font-weight: 400;
@@ -203,7 +295,7 @@ nav {
   padding: 0 24px;
 }
 
-#project2 p {
+.project p {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -213,7 +305,7 @@ nav {
   margin-bottom: 20px;
 }
 
-#project2 button {
+.project button {
   width: 327px;
   height: 48px;
   background-color: #ff6b00;
@@ -229,7 +321,7 @@ nav {
   border: none;
 }
 
-#project2 .skills {
+.project .skills {
   padding: 0 24px;
 }
 
@@ -243,10 +335,29 @@ nav {
   margin-bottom: 15px;
 }
 
-#project2 li {
+.project li {
   color: #fff;
 }
 
+@media (min-width: 768px) {
+  #projects {
+    grid-template-columns: auto auto auto;
+    grid-template-rows: repeat(3, auto);
+  }
+
+  #project1 {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    background-color: #8993a4;
+  }
+
+  /* .project {
+    grid-column: 1 / span;
+    grid-row: 2/3;
+  } */
+}
+
+/* ////////////////////////////////////////// */
 #about-me {
   display: flex;
   flex-direction: column;
