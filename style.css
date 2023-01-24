@@ -6,12 +6,47 @@
   padding: 0;
 }
 
-ul,
-li {
-  list-style: none;
+html {
+  scroll-behavior: smooth;
 }
 
-/* I used !important here because I faced problem doesn't work even 2 way 1-give all buttuns same #id or !important  */
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* buttons actions */
 button:hover {
   background-color: #fff5e1 !important;
   color: #f55800 !important;
@@ -28,9 +63,11 @@ button:focus {
   color: #fff !important;
 }
 
+/* end button actions */
+
 header {
   width: 100%;
-  height: auto;
+  background-color: #1c1a19;
 }
 
 nav {
@@ -98,16 +135,15 @@ nav #menu-icon {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  height: 590px;
   padding: 120px 24px;
   background-color: #1c1a19;
   color: #fff;
   position: relative;
 }
 
-#intro {
-  width: 100%;
-}
+/* #intro {
+  width: 50%;
+} */
 
 #header-body h1 {
   font-family: "Crete Round", serif;
@@ -142,40 +178,44 @@ nav #menu-icon {
   padding: 12px;
 }
 
-/* #illustrationWrap {
+#illustration {
   position: absolute;
   right: 0;
-  top: 53%;
-} */
-#illustrationWrap:first-child {
-  /* display: none; */
-  background-color: #172b4d;
+  bottom: 0;
 }
 
-#illustrationWrap:last-child {
+#illustration2 {
   display: none;
 }
 
 @media (min-width: 768px) {
+  header {
+    height: 100vh;
+  }
+
   #header-body {
     flex-direction: row;
     gap: 20px;
   }
 
   #intro {
-    width: 40%;
+    width: 50%;
   }
 
   #header-body h1 {
     font-size: 62px;
   }
 
-  #illustrationWrap:first-child {
+  #illustration {
     display: none;
   }
 
-  #illustrationWrap:last-child {
+  #illustration2 {
+    width: 50%;
     display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 
   .social-icons-header {
@@ -405,8 +445,8 @@ nav #menu-icon {
 
 #about-me #illustrationSec {
   position: absolute;
-  left: 58.11%;
   top: 64.79%;
+  right: 0;
 }
 
 #about-me hr {
@@ -458,6 +498,8 @@ nav #menu-icon {
   position: absolute;
   left: 10px;
 }
+
+/* //////////////// contact me////////////////////// */
 
 #contact-me {
   display: flex;
@@ -531,6 +573,8 @@ nav #menu-icon {
   margin-top: 100px;
 }
 
-#contact-me ul {
-  padding: 30px;
+#contact-me .social-icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
