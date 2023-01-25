@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="style.css" />
-    <title>Yousef Badr</title>
+    <!-- <title>Yousef Badr</title> -->
   </head>
 
   <body>
     <header>
       <nav>
-        <div class="container" id="nav-container">
+        <div class="container">
           <a href="#" id="logo">Yousef Badr</a>
 
           <div id="menu-icon"></div>
@@ -25,66 +25,67 @@
           </ul>
         </div>
       </nav>
-      <section id="header-body">
-        <div class="container">
-          <div id="intro">
-            <h1>Hey There. I'm Yousef</h1>
-            <h5>I’am a Software Developer</h5>
-            <p>
-              I can help you build a product , feature or website Look through
-              some of my work and experience! If you like what you see and have
-              a project you need coded, don’t hestiate to contact me.
-            </p>
-          </div>
 
-          <div id="illustration">
-            <img src="./images/Group.png" alt="illustration background" />
-          </div>
-          <div id="illustration2">
-            <img
-              src="./images/Illustration-header.png"
-              alt="illustration background"
-            />
-          </div>
-          <ul class="social-icons-header">
-            <li>
-              <a href=""
-                ><img src="./images/Icon -GitHub.png" alt="github icon" />
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <img src="./images/Icon - Linkedin.png" alt="linkedin icon" />
-              </a>
-            </li>
-            <li>
-              <a href="#"
-                ><img src="./images/Icon - Angelist.png" alt="anglist icon" />
-              </a>
-            </li>
-            <li>
-              <a href="#"
-                ><img src="./images/Icon - Twitter.png" alt="twitter icon" />
-              </a>
-            </li>
-            <li>
-              <a href=""
-                ><img src="./images/Icon - Medium.png" alt="medium icon" />
-              </a>
-            </li>
-          </ul>
+      <section class="header">
+        <div id="intro">
+          <h1>Hey There. I'm Yousef</h1>
+          <h5>I’am a Software Developer</h5>
+          <p>
+            I can help you build a product , feature or website Look through
+            some of my work and experience! If you like what you see and have a
+            project you need coded, don’t hestiate to contact me.
+          </p>
+        </div>
+
+        <ul class="social-icons-header">
+          <li>
+            <a href=""
+              ><img src="./images/Icon -GitHub.png" alt="github icon" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="./images/Icon - Linkedin.png" alt="linkedin icon" />
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="./images/Icon - Angelist.png" alt="anglist icon" />
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="./images/Icon - Twitter.png" alt="twitter icon" />
+            </a>
+          </li>
+          <li>
+            <a href=""
+              ><img src="./images/Icon - Medium.png" alt="medium icon" />
+            </a>
+          </li>
+        </ul>
+        <img
+          src="./images/Group.png"
+          id="illustration"
+          alt="illustration background"
+        />
+        <div id="illustration2">
+          <img
+            src="./images/Illustration-header.png"
+            alt="illustration background"
+          />
         </div>
       </section>
     </header>
-    <section id="myworks">
-      <div id="title">
-        <h2>My Recent Works</h2>
-        <hr />
-      </div>
-
-      <div class="container" id="projects">
-        <section id="project1">
-          <img src="./images/Img Placeholder.png" alt="project background" />
+    <div id="title" class="container">
+      <h2>My Recent Works</h2>
+      <hr />
+    </div>
+    <section class="container" id="myworks">
+      <section class="p1">
+        <!-- <img src="./images/Img Placeholder.png" alt="project background" /> -->
+        <div id="p1-img"></div>
+        <div id="details">
           <h3>Multi-Post Stories</h3>
           <p>
             A daily selection of privately personalized reads; no accounts or
@@ -98,9 +99,10 @@
             <li>Ruby</li>
           </ul>
           <button>See Project</button>
-        </section>
-
-        <section class="project p2">
+        </div>
+      </section>
+      <div class="projects">
+        <section class="p2">
           <h3>Profesional Art Printing Data</h3>
           <p>
             A daily selection of privately personalized reads; no accounts or
@@ -114,7 +116,7 @@
           <button>See Project</button>
         </section>
 
-        <section class="project p3">
+        <section class="p2">
           <h3>Profesional Art Printing Data</h3>
           <p>
             A daily selection of privately personalized reads; no accounts or
@@ -128,7 +130,7 @@
           <button>See Project</button>
         </section>
 
-        <section class="project p4">
+        <section class="p2">
           <h3>Profesional Art Printing Data</h3>
           <p>
             A daily selection of privately personalized reads; no accounts or
@@ -142,7 +144,7 @@
           <button>See Project</button>
         </section>
 
-        <section class="project p5">
+        <section class="p2">
           <h3>Profesional Art Printing Data</h3>
           <p>
             A daily selection of privately personalized reads; no accounts or
@@ -158,57 +160,69 @@
       </div>
     </section>
     <section id="about-me">
-      <div id="about-header">
-        <h4 id="title">About me</h4>
-        <p>
-          Hello I’m a software developer! I can help you build a product ,
-          feature or website Look through some of my work and experience! If you
-          like what you see and have a project you need coded, don’t hestiate to
-          contact me.
-        </p>
-        <button id="download">Get My Resume</button>
+      <div id="about-header" class="container">
+        <div class="details">
+          <h4>About me</h4>
+          <p>
+            Hello I’m a software developer! I can help you build a product ,
+            feature or website Look through some of my work and experience! If
+            you like what you see and have a project you need coded, don’t
+            hestiate to contact me.
+          </p>
+          <button id="download">Get My Resume</button>
+        </div>
+        <div class="illusWrap">
+          <img
+            src="./images/illustration-about-me-mobile.png"
+            id="illustrationSec"
+            alt="project wallpaper"
+          />
+        </div>
+      </div>
+      <div class="illusWrap2">
         <img
-          src="./images/illustration-about-me-mobile.png"
+          src="./images/illustration-about me.png"
           id="illustrationSec"
           alt="project wallpaper"
         />
       </div>
-
       <hr />
 
-      <ul id="about-my-self">
-        <li class="tools">
-          <h4 class="heading1">Language</h4>
-          <ul>
-            <li>Java Script</li>
-            <li>Ruby</li>
-            <li>Html</li>
-            <li>Css</li>
-          </ul>
-        </li>
-        <li class="tools">
-          <h4 class="heading2">Framworkes</h4>
-          <ul>
-            <li>Ruby on Rails</li>
-            <li>Bootstrap</li>
-            <li>Selenium</li>
-            <li>RSPec</li>
-            <li>CapyBara</li>
-          </ul>
-        </li>
-        <li class="tools">
-          <h4 class="heading3">Skills</h4>
-          <ul>
-            <li>GitHub</li>
-            <li>Codekit</li>
-            <li>Codepen</li>
-            <li>Gitlab</li>
-            <li>Ubuntu</li>
-          </ul>
-        </li>
-      </ul>
+      <section class="container">
+        <ul id="about-my-self">
+          <li class="tools">
+            <h4 class="head heading1">Language</h4>
+            <ul>
+              <li>Java Script</li>
+              <li>Ruby</li>
+              <li>Html</li>
+              <li>Css</li>
+            </ul>
+          </li>
+          <li class="tools">
+            <h4 class="head heading2">Framworkes</h4>
+            <ul>
+              <li>Ruby on Rails</li>
+              <li>Bootstrap</li>
+              <li>Selenium</li>
+              <li>RSPec</li>
+              <li>CapyBara</li>
+            </ul>
+          </li>
+          <li class="tools">
+            <h4 class="head heading3">Skills</h4>
+            <ul>
+              <li>GitHub</li>
+              <li>Codekit</li>
+              <li>Codepen</li>
+              <li>Gitlab</li>
+              <li>Ubuntu</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
     </section>
-    <section id="contact-me">
+    <!-- <section id="contact-me">
       <h3>
         I'm always interested in hearing about new projects, so if you'd like to
         chat please get in touch.
@@ -268,6 +282,8 @@
           <a href=""><img src="./images/medium.png" alt="medium icon" /> </a>
         </li>
       </ul>
-    </section>
+    </section> -->
+
+    <script src="./test.js"></script>
   </body>
 </html>
