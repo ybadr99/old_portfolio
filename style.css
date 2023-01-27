@@ -106,15 +106,31 @@ nav #menu-icon {
 }
 
 #nav-el {
-  color: #fff;
   margin-right: 50px;
   display: none;
 }
 
-#nav-el #message {
+nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.5s ease-out;
+}
+
+nav a:hover {
+  color: #e05304;
+}
+
+nav #message {
   background-image: url("./images/Icon\ -\ Mail.png");
   width: 24px;
   height: 24px;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+
+nav #message:hover,
+#logo:hover {
+  color: #e05304;
 }
 
 @media (min-width: 768px) {
@@ -148,6 +164,12 @@ nav #menu-icon {
   line-height: 64px;
   color: #ff6b00;
   margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .header h1 {
+    color: #e05304;
+  }
 }
 
 .header h5 {
@@ -193,7 +215,6 @@ nav #menu-icon {
   }
 
   #intro {
-    /* width: 30%; */
     width: 544px;
     margin-top: 100px;
     margin-left: 50px;
@@ -214,11 +235,12 @@ nav #menu-icon {
   }
 
   #illustration2 {
-    /* width: 50%; */
     display: block;
     position: absolute;
     right: 0;
     top: 0;
+    max-width: 1001.81px;
+    max-height: 768.48px;
   }
 
   .social-icons-header {
@@ -233,7 +255,6 @@ nav #menu-icon {
 /* /////////////////// myWorks ////////////////////////////// */
 
 #title {
-  /* width: 100%; */
   height: 83px;
   font-family: "Crete Round", sans-serif;
   font-weight: 100;
@@ -264,7 +285,6 @@ nav #menu-icon {
 /* project1 */
 
 .p1 {
-  /* background-color: #3c3a39; */
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
@@ -448,9 +468,6 @@ nav #menu-icon {
 }
 
 .illusWrap {
-  /* background-image: url("./images/illustration-about-me-mobile.png");
-  background-repeat: no-repeat;
-  background-size: cover; */
   width: 50%;
   height: 300px;
   position: absolute;
@@ -515,7 +532,7 @@ nav #menu-icon {
 
 @media (min-width: 768px) {
   #about-me hr {
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
   }
 }
@@ -548,22 +565,15 @@ nav #menu-icon {
   margin-top: 20px;
 }
 
-.heading1::before {
-  content: url("./images/Rectangle\ 55.png");
-  position: absolute;
-  left: -15px;
+.head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.heading2::before {
-  content: url("./images/Rectangle\ 56.png");
-  position: absolute;
-  left: -15px;
-}
-
-.heading3::before {
-  content: url("./images/Rectangle\ 57.png");
-  position: absolute;
-  left: -15px;
+.tools img {
+  width: 18px;
+  height: 18px;
 }
 
 @media (min-width: 768px) {
@@ -578,10 +588,6 @@ nav #menu-icon {
     width: 33%;
     text-align: left;
     padding: 10px;
-  }
-
-  .heading1::before {
-    left: -25px;
   }
 }
 
@@ -605,9 +611,9 @@ nav #menu-icon {
   font-family: "Inter", sans-serif;
 }
 
-#contact-me #name,
+#contact-me #fname,
+#contact-me #lname,
 #contact-me #email {
-  /* width: 50%; */
   height: 48px;
   border: none;
   border-bottom: 1px solid #dbd8d7;
@@ -669,13 +675,14 @@ footer .social-icons {
     width: 100%;
   }
 
-  #contact-me #name,
-  #contact-me #email {
+  #contact-me #fname,
+  #contact-me #lname {
     width: 49%;
     padding: 30px;
   }
 
-  #contact-me #message {
+  #contact-me #message,
+  #contact-me #email {
     width: 100%;
   }
 }
