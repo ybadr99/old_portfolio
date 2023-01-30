@@ -1,3 +1,12 @@
+<div align="center">
+  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
+  <img src="./images/portfolio_screen.png" alt="portfolio" width="240"  height="auto" />
+  <br/>
+
+  <h3><b>My Portfolio</b></h3>
+
+</div>
+
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
@@ -53,7 +62,7 @@
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="live-demo"></a>
+## 🚀 Live Demo <a name="live-demo">https://ybadr99.github.io/portfolio/</a>
 
 > Project ain't yet deployed.
 
