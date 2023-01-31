@@ -95,6 +95,7 @@ nav .container {
   font-size: 18px;
   line-height: 24px;
   text-decoration: none;
+  animation: rotateLogo 1s linear 1;
 }
 
 nav #menu-icon {
@@ -164,6 +165,11 @@ nav #message:hover,
   line-height: 64px;
   color: #ff6b00;
   margin-bottom: 10px;
+  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  width: 18ch;
 }
 
 @media (min-width: 768px) {
@@ -683,5 +689,35 @@ footer .social-icons {
   #contact-me #message,
   #contact-me #email {
     width: 100%;
+  }
+}
+
+@keyframes rotateLogo {
+  0% {
+    transform: rotate(0deg);
+    z-index: 99;
+    scale: 1;
+  }
+  50% {
+    transform: rotate(180deg);
+    z-index: 99;
+    scale: 1.5;
+  }
+  100% {
+    transform: rotate(360deg);
+    z-index: 0;
+    scale: 1;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
   }
 }
