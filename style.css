@@ -698,11 +698,13 @@ footer .social-icons {
     z-index: 99;
     scale: 1;
   }
+
   50% {
     transform: rotate(180deg);
     z-index: 99;
     scale: 1.5;
   }
+
   100% {
     transform: rotate(360deg);
     z-index: 0;
