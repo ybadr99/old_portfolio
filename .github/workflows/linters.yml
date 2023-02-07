@@ -6,7 +6,7 @@ env:
   FORCE_COLOR: 1
 
 jobs:
-  lighthouse:vc3v3
+  lighthouse:
     name: Lighthouse
     runs-on: ubuntu-22.04
     steps:
