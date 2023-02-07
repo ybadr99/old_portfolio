@@ -70,6 +70,11 @@ header {
   background-color: #1c1a19;
 }
 
+header.fixed {
+  position: fixed;
+  z-index: 99;
+}
+
 nav {
   background-color: #3c3a39;
   display: flex;
@@ -170,6 +175,7 @@ nav a:hover {
 
 @media (min-width: 768px) {
   .nav-menu {
+    width: auto;
     position: relative;
     left: 0;
     top: 0;
