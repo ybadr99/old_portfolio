@@ -15,6 +15,8 @@ navItem.forEach((n) => {
   n.addEventListener('click', () => {
     menuIcon.classList.remove('active');
     navMenu.classList.remove('active');
+    navItem.forEach((li) => li.classList.remove('active'));
     logo.classList.remove('hide');
+    document.querySelector('header').classList.remove('fixed');
   });
 });
