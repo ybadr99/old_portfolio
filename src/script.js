@@ -55,3 +55,71 @@ window.addEventListener("click", (e) => {
   }
 });
 // end pop-up modal ////////////////////////
+
+const projects = [
+  {
+    id: 1,
+    name: "Profesional Art Printing Data",
+    desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
+    imageUrl: "http://",
+    skills: ["html", "css", "js", "bootstrap"],
+    liveVersion: "http://",
+    sourceCode: "http://",
+  },
+  {
+    id: 2,
+    name: "Profesional Art Printing Data",
+    desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
+    imageUrl: "http://",
+    skills: ["html", "css", "js", "bootstrap"],
+    liveVersion: "http://",
+    sourceCode: "http://",
+  },
+  {
+    id: 3,
+    name: "Profesional Art Printing Data",
+    desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
+    imageUrl: "http://",
+    skills: ["html", "css", "js", "bootstrap"],
+    liveVersion: "http://",
+    sourceCode: "http://",
+  },
+];
+
+const renderProject = (project) => {
+  const section = document.createElement("section");
+  section.classList.add("p2");
+
+  // the name of the project
+  const h3 = document.createElement("h3");
+  h3.innerHTML = project.name;
+  // description
+  const p = document.createElement("p");
+  p.innerHTML = project.desc;
+
+  // skills ul,li
+  const ul = document.createElement("ul");
+  ul.classList.add("skills");
+
+  project.skills.forEach((skill) => {
+    const li = document.createElement("li");
+    li.innerHTML = skill;
+    ul.appendChild(li);
+  });
+
+  // button
+  const button = document.createElement("button");
+  button.classList.add("see-project");
+  button.innerText = "See Project";
+
+  section.appendChild(h3);
+  section.appendChild(p);
+  section.appendChild(ul);
+  section.appendChild(button);
+
+  return section;
+};
+
+projects.forEach((project) => {
+  document.querySelector(".projects").appendChild(renderProject(project));
+});
