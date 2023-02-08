@@ -64,7 +64,7 @@
 
 ## 🚀 Live Demo <a name="live-demo">https://ybadr99.github.io/portfolio/</a>
 
-> Project ain't yet deployed.
+> Check out the live demo here: https://ybadr99.github.io/portfolio/
 
 <!-- GETTING STARTED -->
 
@@ -149,6 +149,10 @@ Contributions, issues, and feature requests are welcome!
 Feel free to check the [issues page](https://github.com/ybadr99/portfolio/issues).
 
 <!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this project:thumbsup:
 
 <!-- ACKNOWLEDGEMENTS -->
 
