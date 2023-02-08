@@ -34,10 +34,8 @@ navItem.forEach((n) => {
 // Get the button that opens the modal
 window.onload = () => {
   const projectBtns = document.querySelectorAll('.see-project');
-  console.log(projectBtns);
 
   projectBtns.forEach((btn) => {
-    console.log(btn);
     btn.addEventListener('click', () => {
       modal.style.display = 'block';
     });
