@@ -61,34 +61,62 @@ const projects = [
     id: 1,
     name: "Profesional Art Printing Data",
     desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
-    imageUrl: "http://",
+    imageUrl: "../images/Img-Placeholder.png",
     skills: ["html", "css", "js", "bootstrap"],
-    liveVersion: "http://",
-    sourceCode: "http://",
+    liveVersion: "https://ybadr99.github.io/portfolio/",
+    sourceCode: "https://github.com/ybadr99/portfolio",
   },
   {
     id: 2,
     name: "Profesional Art Printing Data",
     desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
-    imageUrl: "http://",
+    imageUrl: "../images/Img-Placeholder2.png",
     skills: ["html", "css", "js", "bootstrap"],
-    liveVersion: "http://",
-    sourceCode: "http://",
+    liveVersion: "https://ybadr99.github.io/portfolio/",
+    sourceCode: "https://github.com/ybadr99/portfolio",
   },
   {
     id: 3,
     name: "Profesional Art Printing Data",
     desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
-    imageUrl: "http://",
+    imageUrl: "../images/p2.png",
     skills: ["html", "css", "js", "bootstrap"],
-    liveVersion: "http://",
-    sourceCode: "http://",
+    liveVersion: "https://ybadr99.github.io/portfolio/",
+    sourceCode: "https://github.com/ybadr99/portfolio",
+  },
+  {
+    id: 4,
+    name: "Profesional Art Printing Data",
+    desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
+    imageUrl: "../images/Img-Placeholder.png",
+    skills: ["html", "css", "js", "bootstrap"],
+    liveVersion: "https://ybadr99.github.io/portfolio/",
+    sourceCode: "https://github.com/ybadr99/portfolio",
+  },
+  {
+    id: 5,
+    name: "Profesional Art Printing Data",
+    desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
+    imageUrl: "../images/Img-Placeholder2.png",
+    skills: ["html", "css", "js", "bootstrap"],
+    liveVersion: "https://ybadr99.github.io/portfolio/",
+    sourceCode: "https://github.com/ybadr99/portfolio",
+  },
+  {
+    id: 6,
+    name: "Profesional Art Printing Data",
+    desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
+    imageUrl: "../images/p2.png",
+    skills: ["html", "css", "js", "bootstrap"],
+    liveVersion: "https://ybadr99.github.io/portfolio/",
+    sourceCode: "https://github.com/ybadr99/portfolio",
   },
 ];
 
 const renderProject = (project) => {
   const section = document.createElement("section");
   section.classList.add("p2");
+  section.style.backgroundImage = `url(${project.imageUrl})`;
 
   // the name of the project
   const h3 = document.createElement("h3");

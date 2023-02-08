@@ -423,7 +423,6 @@ nav a:hover {
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-  background-image: url("./images/p2.png");
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
@@ -785,7 +784,7 @@ footer .social-icons {
   justify-content: space-between;
 }
 
-.modal-content h4 {
+.modal-content h5 {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -810,7 +809,7 @@ footer .social-icons {
   max-width: 100%;
 }
 
-.modal-content p {
+.modal-content .para {
   width: 100%;
   height: auto;
   font-family: "Inter", sans-serif;
