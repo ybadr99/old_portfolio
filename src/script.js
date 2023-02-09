@@ -209,9 +209,10 @@ form.addEventListener("submit", (e) => {
 
 const inputs = ["fname", "lname", "email", "message"];
 
-const formData = JSON.parse(localStorage.getItem("formData"));
+let formData = JSON.parse(localStorage.getItem("formData"));
 if (!formData) {
-  formData = {};
+  localStorage.setItem("formData", JSON.stringify(formData = {}));
+  
 }
 
 inputs.forEach((el) => {
@@ -225,5 +226,18 @@ const saveToLocalStorage = (input) => {
   formData[input];
   localStorage.setItem("formData", JSON.stringify(formData));
 };
+
+// pass the formData to the input field
+window.addEventListener("load", (e) => {
+  // saveToLocalStorage();
+  const newData = JSON.parse(localStorage.getItem("formData"));
+  console.log(newData);
+  if (newData) {
+    inputs.forEach((el) => {
+      console.log(newData[el]);
+      form.elements[el].value = newData[el];
+    });
+  }
+});
 
 // ------------ end  preserve data into local storage------------
