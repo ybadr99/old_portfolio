@@ -32,7 +32,10 @@
 
       <section class="header">
         <div id="intro">
-          <h1>Hey There. I'm Yousef</h1>
+          <h1>
+            Hey There.<br />
+            I'm Yousef
+          </h1>
           <h5>I’am a Software Developer</h5>
           <p>
             I can help you build a product , feature or website Look through
@@ -187,49 +190,45 @@
           I'm always interested in hearing about new projects, so if you'd like
           to chat please get in touch.
         </h3>
-        <form method="post" action="https://formspree.io/f/xpzewdnr">
-          <label for="fname">
+        <form
+          method="post"
+          id="contact-form"
+          action="https://formspree.io/f/xpzewdnr"
+        >
+          <div class="field field50">
+            <label for="fname"></label>
             <input
               type="text"
               id="fname"
               name="name"
               placeholder="First name"
-              required
-              minlength="3"
-              maxlength="30"
             />
-          </label>
-          <label for="lname">
-            <input
-              type="text"
-              id="lname"
-              name="name"
-              placeholder="Last name"
-              required
-              minlength="3"
-              maxlength="30"
-            />
-          </label>
-          <label for="email">
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Email address"
-              required
-            />
-          </label>
-          <label for="message">
+            <small></small>
+          </div>
+
+          <div class="field field50">
+            <label for="lname"></label>
+            <input type="text" id="lname" name="name" placeholder="Last name" />
+            <small></small>
+          </div>
+
+          <div class="field">
+            <label for="email"> </label>
+            <input id="email" name="email" placeholder="Email address" />
+            <small></small>
+          </div>
+          <div class="field">
+            <label for="message"> </label>
             <textarea
               id="message"
               name="message"
               maxlength="500"
-              required
               cols="30"
               rows="4"
               placeholder="Enter text here"
             ></textarea>
-          </label>
+            <small></small>
+          </div>
           <button type="submit">Get in touch</button>
         </form>
       </div>
