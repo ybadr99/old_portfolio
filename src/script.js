@@ -189,5 +189,19 @@ form.addEventListener("submit", (e) => {
   } else {
     showMessage(message, "", true);
   }
+    // validate the email and email should be lowercase
+    const emailRegex =
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  if (
+    email.value.trim().length === 0 ||
+    email.value.trim().toLowerCase() !== email.value.trim() ||
+    !emailRegex.test(email.value.trim())
+  ) {
+    e.preventDefault();
+    showMessage(email, "Please enter a valid Email", false);
+  } else {
+    showMessage(email, "", true);
+  }
 });
+
 // ------------end form validation------------------------
