@@ -215,11 +215,6 @@ nav a:hover {
   line-height: 64px;
   color: #ff6b00;
   margin-bottom: 10px;
-
-  /* animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid; */
 }
 
 .header h5 {
@@ -255,6 +250,20 @@ nav a:hover {
   display: none;
 }
 
+@media (min-width: 948px) {
+  .header {
+    flex-direction: row;
+    background-image: url("./images/Illustration-header.png");
+    background-repeat: no-repeat;
+    background-size: 35% 100%;
+    background-position: top right;
+  }
+
+  #illustration {
+    display: none;
+  }
+}
+
 @media (min-width: 768px) {
   header {
     height: 100vh;
@@ -280,25 +289,18 @@ nav a:hover {
     line-height: 32px;
   }
 
-  #illustration {
-    display: none;
-  }
-
-  #illustration2 {
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-    max-width: 1001.81px;
-    max-height: 768.48px;
-  }
-
   .social-icons-header {
     width: 50px;
     flex-direction: column;
     order: -1;
     margin-top: 120px;
     margin-right: 20px;
+  }
+}
+
+@media (max-width: 948px) {
+  #illustration2 {
+    bottom: 0 !important;
   }
 }
 
@@ -759,7 +761,7 @@ footer .social-icons {
   padding: 20px;
   border: 1px solid #888;
   width: 90%;
-  height: 96%;
+  height: auto;
 }
 
 /* The Close Button */
@@ -805,12 +807,19 @@ footer .social-icons {
   border: 1px solid #8993a4;
 }
 
-.imgWrapper img {
+.modal-content .content .modal-img img {
   max-width: 100%;
 }
 
+.modal-content .content .modal-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+}
+
 .modal-content .para {
-  width: 100%;
+  width: 100% !important;
   height: auto;
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -818,7 +827,6 @@ footer .social-icons {
   font-size: 16px;
   line-height: 24px;
   color: #344563;
-  margin: 20px 0;
 }
 
 .btnWrapper {
@@ -830,6 +838,7 @@ footer .social-icons {
 }
 
 .p-button {
+  width: 164px;
   height: 48px;
   background-color: #ff6b00;
   font-family: "Inter", sans-serif;
@@ -844,36 +853,26 @@ footer .social-icons {
   border: none;
   display: flex;
   justify-content: center;
-  padding: 10px;
+  padding: 12px;
 }
 
-.p-button img {
-  padding-left: 10px;
-  max-width: 100%;
+.p-button:hover {
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
-  .modal-content {
-    height: 80%;
-  }
-
-  .modal-content h4 {
-    content: "Keeping track of hundreds  of components website";
-  }
-
-  .content-wrapper {
+  .modal-content .content {
+    width: 100%;
     display: flex;
     gap: 20px;
   }
 
-  .content-wrapper .details {
-    width: 40%;
+  .modal-content .content .modal-img img {
+    max-width: 100%;
   }
 
-  .content-wrapper .details p {
-    line-height: 30px;
-    margin: 0;
-    margin-bottom: 80px;
+  .modal-content .content .modal-details {
+    /* width: 40%; */
   }
 }
 

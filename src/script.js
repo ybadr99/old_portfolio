@@ -2,57 +2,9 @@ const menuIcon = document.querySelector('.menu-icon');
 const navMenu = document.querySelector('.nav-menu');
 const navItem = document.querySelectorAll('.nav-item');
 const logo = document.querySelector('.logo');
-
 const modal = document.querySelector('.modal');
-
 // Get the <span> element that closes the modal
 const spanClose = document.querySelector('.close');
-
-// /////////////////navbar menu
-menuIcon.addEventListener('click', () => {
-  menuIcon.classList.toggle('active');
-  navMenu.classList.toggle('active');
-  navItem.forEach((li) => li.classList.toggle('active'));
-  logo.classList.toggle('hide');
-  document.querySelector('header').classList.toggle('fixed');
-});
-
-navItem.forEach((n) => {
-  n.addEventListener('click', () => {
-    menuIcon.classList.remove('active');
-    navMenu.classList.remove('active');
-    navItem.forEach((li) => li.classList.remove('active'));
-    logo.classList.remove('hide');
-    document.querySelector('header').classList.remove('fixed');
-  });
-});
-
-// end navbar menu
-
-// pop-up modal ////////////////////////
-
-// Get the button that opens the modal
-window.onload = () => {
-  const projectBtns = document.querySelectorAll('.see-project');
-
-  projectBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      modal.style.display = 'block';
-    });
-  });
-};
-
-spanClose.addEventListener('click', () => {
-  modal.style.display = 'none';
-});
-
-window.addEventListener('click', (e) => {
-  if (e.target === modal) {
-    modal.style.display = 'none';
-  }
-});
-// end pop-up modal ////////////////////////
-
 const projects = [
   {
     id: 1,
@@ -110,6 +62,7 @@ const projects = [
   },
 ];
 
+// -----------functions-----------
 const renderProject = (project) => {
   const section = document.createElement('section');
   section.classList.add('p2');
@@ -134,6 +87,7 @@ const renderProject = (project) => {
 
   // button
   const button = document.createElement('button');
+  button.id = project.id;
   button.classList.add('see-project');
   button.innerText = 'See Project';
 
@@ -144,6 +98,93 @@ const renderProject = (project) => {
 
   return section;
 };
+
+const changeModalContent = (project) => {
+  const modalEl = `
+    <div class="modal-content container">
+      <div class="head">
+        <h5>${project.name}</h5>
+        <span class="close">&times;</span>
+      </div>
+      <ul class="skills">
+        <li>html</li>
+        <li>Bootstrap</li>
+        <li>Ruby on rails</li>
+      </ul>
+      <div class="content">
+        <div class="modal-img">
+          <img src="${project.imageUrl}" alt="" />
+        </div>
+        <div class="modal-details">
+          <p class="para">
+            ${project.desc}
+          </p>
+          <div class="btnWrapper">
+            <a href="${project.liveVersion}" class="p-button">
+              See Live
+              <img src="./images/Icon - Export.png" alt="See Live " />
+            </a>
+            <a href="${project.sourceCode}" class="p-button">
+              See Source
+              <img src="./images/github3.png" alt="See Source " />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+
+  modal.innerHTML = modalEl;
+};
+
+// --------functions--------
+
+// /////////////////navbar menu
+menuIcon.addEventListener('click', () => {
+  menuIcon.classList.toggle('active');
+  navMenu.classList.toggle('active');
+  navItem.forEach((li) => li.classList.toggle('active'));
+  logo.classList.toggle('hide');
+  document.querySelector('header').classList.toggle('fixed');
+});
+
+navItem.forEach((n) => {
+  n.addEventListener('click', () => {
+    menuIcon.classList.remove('active');
+    navMenu.classList.remove('active');
+    navItem.forEach((li) => li.classList.remove('active'));
+    logo.classList.remove('hide');
+    document.querySelector('header').classList.remove('fixed');
+  });
+});
+
+// end navbar menu
+
+// pop-up modal ////////////////////////
+
+// Get the button that opens the modal
+window.addEventListener('load', () => {
+  const projectBtns = document.querySelectorAll('.see-project');
+  projectBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      // console.log(typeof +btn.id);
+      const project = projects.find((project) => project.id === +btn.id);
+      changeModalContent(project);
+      modal.style.display = 'block';
+    });
+  });
+});
+
+spanClose.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+window.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.style.display = 'none';
+  }
+});
+// end pop-up modal ////////////////////////
 
 projects.forEach((project) => {
   document.querySelector('.projects').appendChild(renderProject(project));
