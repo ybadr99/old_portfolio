@@ -51,6 +51,7 @@ button:hover {
   background-color: #fff5e1 !important;
   color: #f55800 !important;
   border: 1px solid #f55800 !important;
+  cursor: pointer;
 }
 
 button:disabled {
@@ -206,6 +207,7 @@ nav a:hover {
 }
 
 .header h1 {
+  /* width: 18; */
   font-family: "Crete Round", serif;
   font-style: normal;
   font-weight: 400;
@@ -213,17 +215,11 @@ nav a:hover {
   line-height: 64px;
   color: #ff6b00;
   margin-bottom: 10px;
-  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+
+  /* animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid;
-  width: 18ch;
-}
-
-@media (min-width: 768px) {
-  .header h1 {
-    color: #e05304;
-  }
+  border-right: 3px solid; */
 }
 
 .header h5 {
@@ -427,7 +423,6 @@ nav a:hover {
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-  background-image: url("./images/p2.png");
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
@@ -665,6 +660,19 @@ nav a:hover {
   font-family: "Inter", sans-serif;
 }
 
+#contact-me .field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+#contact-me small {
+  padding-left: 20px;
+  color: red;
+}
+
 #contact-me #fname,
 #contact-me #lname,
 #contact-me #email {
@@ -673,7 +681,6 @@ nav a:hover {
   border-bottom: 1px solid #dbd8d7;
   font-family: "Inter", sans-serif;
   font-size: 16px;
-  margin-bottom: 20px;
   padding: 20px;
   width: 100%;
 }
@@ -704,14 +711,6 @@ nav a:hover {
   border: none;
 }
 
-footer .social-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  margin: 30px 0;
-}
-
 @media (min-width: 768px) {
   #contact-me .container {
     display: flex;
@@ -728,17 +727,169 @@ footer .social-icons {
     width: 100%;
   }
 
-  #contact-me #fname,
-  #contact-me #lname {
-    width: 49%;
-    padding: 30px;
-  }
-
-  #contact-me #message,
-  #contact-me #email {
-    width: 100%;
+  .field50 {
+    width: 50% !important;
+    float: left;
   }
 }
+
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 30px 0;
+}
+
+/* pop modal */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 50px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 90%;
+  height: 96%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content .head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-content h5 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 44px;
+  color: #172b4d;
+}
+
+.modal-content .skills {
+  display: flex;
+  margin: 20px 0;
+}
+
+.modal-content .skills li {
+  font-size: 16px;
+  line-height: 20px;
+  padding: 8px 10px;
+  border: 1px solid #8993a4;
+}
+
+.imgWrapper img {
+  max-width: 100%;
+}
+
+.modal-content .para {
+  width: 100%;
+  height: auto;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #344563;
+  margin: 20px 0;
+}
+
+.btnWrapper {
+  max-width: 300px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0;
+}
+
+.p-button {
+  height: 48px;
+  background-color: #ff6b00;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #fff;
+  border: none;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.p-button img {
+  padding-left: 10px;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .modal-content {
+    height: 80%;
+  }
+
+  .modal-content h4 {
+    content: "Keeping track of hundreds  of components website";
+  }
+
+  .content-wrapper {
+    display: flex;
+    gap: 20px;
+  }
+
+  .content-wrapper .details {
+    width: 40%;
+  }
+
+  .content-wrapper .details p {
+    line-height: 30px;
+    margin: 0;
+    margin-bottom: 80px;
+  }
+}
+
+/* end pop modal */
+
+.error {
+  border: 0.5px solid red !important;
+}
+
+/* //////animation */
 
 @keyframes rotateLogo {
   0% {
